@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:one_place_app_poc/All%20Chat%20List/chat_listing_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -8,6 +9,16 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const ChatListingScreen()));
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
